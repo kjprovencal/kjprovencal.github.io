@@ -7,10 +7,10 @@ import Footer from './Components/Footer';
 import About from './Components/About';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
-import Gallery from './Components/Gallery';
+import {Gallery} from './Components/Gallery';
 import Portfolio from './Components/Portfolio';
 
-class App extends Component {
+export default class App extends Component {
 
   constructor(props){
     super(props);
@@ -43,6 +43,7 @@ class App extends Component {
     this.getResumeData();
   }
   //<Portfolio data={this.state.resumeData.portfolio}/>
+  //<Contact data={this.state.resumeData.main}/>
   render() {
     return (
       <div className="App">
@@ -50,11 +51,8 @@ class App extends Component {
         <About data={this.state.resumeData.main}/>
         <Resume data={this.state.resumeData.resume}/>
         <Gallery data={this.state.resumeData.gallery}/>
-        <Contact data={this.state.resumeData.main}/>
         <Footer data={this.state.resumeData.main}/>
       </div>
     );
   }
 }
-
-export default App;
