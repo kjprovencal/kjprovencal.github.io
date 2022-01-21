@@ -14,7 +14,7 @@
       "zip": "04101"
     },
     "website": "http://www.kjprovencal.github.io",
-    "resumedownload": "http://www.kjprovencal.github.io/resume",
+    "resumedownload": "resume.pdf",
     "social": [
       {
         "name": "linkedin",
@@ -34,7 +34,7 @@
     ]
   },
   "resume": {
-    "skillmessage": "Here are some of the technologies I'm familiar with. I'm always learning new things and looking for recommendations.",
+    "skillmessage": "Here are some of the technologies I'm familiar with. I'm always open to learning new things!",
     "education": [
       {
         "school": "University of Massachusetts Amherst",
@@ -90,6 +90,10 @@
     "projects": []
   },
   "gallery":{
-    "albums": []
+    "albums": [
+      {"title": "Costa Rica", "thumbnail": "20210818_105144.jpg", "url": "/CostaRica"},
+      {"title": "San Diego", "thumbnail": "Asset0013.jpg", "url": "/SanDiego"},
+      {"title": "Lily", "thumbnail": "Bumblebee.jpg", "url": "/Lily"}
+    ]
   }
 }
