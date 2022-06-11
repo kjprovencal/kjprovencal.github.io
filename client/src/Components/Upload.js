@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import LoadingSpinner from './Spinner';
 import axios from 'axios';
 
 export default function Upload() {
     const [input, setInput] = useState({})
-
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleChange = e => {
@@ -18,25 +19,29 @@ export default function Upload() {
         if (!input.name || !input.desc || !input.image){
             return;
         }
+        setIsLoading(true);
         // When a post request is sent to the create url, we'll add a new record to the database.
         const newImage = new FormData();
         newImage.append('image', input.image)
         newImage.append('name', input.name)
         newImage.append('desc', input.desc)
-        console.log(newImage.get('name'));
         axios.post("http://localhost:5000/upload", newImage)
+        .then(res => {
+            setInput({ name: "", desc: "", image: ""}); 
+            setIsLoading(true);
+            return;
+        })
         .catch(error => {
-          window.alert(error);
-          setInput({...input});
-          return;
+            setIsLoading(false);
+            window.alert(error);
+            setInput({...input});
+            return;
         });
-      
-        setInput({ name: "", desc: "", image: ""}); 
-        navigate("/upload");
     }
     return (
         <div>
             <h3>Upload Image</h3>
+            {isLoading && <LoadingSpinner/>}
             <div>
                 <form onSubmit={handleSubmit} encType='multipart/form-data'>
                     <div>
@@ -56,7 +61,7 @@ export default function Upload() {
                             name="image" onChange = {handleFileChange}  required/>
                     </div>
                     <div>
-                        <button type="submit">Submit</button>
+                        <button type="submit" disabled={isLoading}>Submit</button>
                     </div>
                 </form>
             </div>
