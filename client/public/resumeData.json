@@ -4,7 +4,7 @@
     "occupation": "recent graduate from the University of Massachusetts at Amherst with a BS in Computer Science",
     "description": "I have experience in full-stack development and a strong interest in cybersecurity",
     "image": "profilepic.jpg",
-    "bio": "I'm a software engineer and outdoor enthusiast from the beautiful state of Maine. I graduated from the University of Massachusetts in Amherst with a BS in Computer Science in December 2021. I have a passion for machine learning and cyber defense.",
+    "bio": "I'm a software engineer and outdoor enthusiast from the beautiful state of Maine. I graduated from the University of Massachusetts in Amherst with a BS in Computer Science in February 2022. I have a passion for learning and building cool things.",
     "contactmessage": "Please feel free to contact me below for more information.",
     "email": "kjprovencal@gmail.com",
     "phone": "207-409-7776",
@@ -13,7 +13,7 @@
       "state": "ME",
       "zip": "04101"
     },
-    "website": "http://www.kjprovencal.github.io",
+    "website": "http://www.kjprovencal.com",
     "resumedownload": "resume.pdf",
     "social": [
       {
@@ -39,7 +39,7 @@
       {
         "school": "University of Massachusetts Amherst",
         "degree": "BS in Computer Science",
-        "graduated": "December 2021",
+        "graduated": "February 2022",
         "description": "Completed a well-rounded curriculum of standard computer science concepts and studied more specific topics such as database management, search engine design, and natural language processing."
       },
       {
